@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Developer Guide &mdash; helloSystem pre-alpha documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Boot process" href="boot.html" />
+    <link rel="prev" title="Providing feedback" href="../user/feedback.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> helloSystem
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="boot.html">Boot process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applications.html">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building.html">Building the Live ISO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distributions.html">Note to distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html">Contact</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">helloSystem</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Developer Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/helloSystem/docs/blob/main/developer/index.md" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="developer-guide">
+<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="boot.html">Boot process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="boot.html#live-system-early-boot-process">Live system early boot process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boot.html#graphical-desktop-start-process">Graphical desktop start process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boot.html#installed-system-boot-process">Installed system boot process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#how-to-get-started">How to get started?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#our-project-values">Our project values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#areas-we-especially-need-help-with">Areas we especially need help with</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="building.html">Building the Live ISO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="building.html#system-requirements-for-building">System requirements for building</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building.html#id1">Building the Live ISO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building.html#writing-live-media-to-usb-drive">Writing Live Media to USB drive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building.html#burning-live-media-to-dvd">Burning Live Media to DVD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building.html#customizing-the-live-iso">Customizing the Live ISO</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="distributions.html">Note to distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#freebsd-project">FreeBSD project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#freebsd-port-maintainers">FreeBSD port maintainers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#simon-peter">Simon Peter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#joe-maloney">Joe Maloney</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#freebsd-foundation">FreeBSD Foundation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#slawomir-wojciech-wojtczak">Sławomir Wojciech Wojtczak</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#reven-martin">Reven Martin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#ale-rimoldi">Ale Rimoldi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#antony-jr">Antony jr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#keshav-bhatt">Keshav Bhatt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#freebsdhelp-on-twitter">&#64;FreeBSDHelp on twitter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#theassassin">TheAssassin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknowledgements.html#leodanis-pozo-ramos">Leodanis Pozo Ramos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="boot.html" class="btn btn-neutral float-right" title="Boot process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../user/feedback.html" class="btn btn-neutral float-left" title="Providing feedback" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, probono
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
